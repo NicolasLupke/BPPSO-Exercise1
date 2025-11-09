@@ -11,8 +11,6 @@ __pycache__/
 
 # Local datasets and large external sources
 Dataset/
-pm4py/
-X-Processes/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
@@ -20,7 +18,4 @@ X-Processes/
 # Results generated locally
 Results/
 
-# OS-specific files
-Thumbs.db
-.DS_Store
 
