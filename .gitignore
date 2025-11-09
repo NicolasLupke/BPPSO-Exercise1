@@ -1,0 +1,26 @@
+# Python virtual environments
+.venv/
+env/
+venv/
+
+# Cache and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Local datasets and large external sources
+Dataset/
+pm4py/
+X-Processes/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Results generated locally
+Results/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
