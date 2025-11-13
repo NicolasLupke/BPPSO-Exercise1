@@ -15,7 +15,6 @@ Dataset/
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Results generated locally
-Results/
+
 
 

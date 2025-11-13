@@ -1,23 +1,19 @@
 import math
 from typing import Any, Iterable, TYPE_CHECKING
+from pm4py import PetriNet
 
-if TYPE_CHECKING:  # pragma: no cover - only needed for type checkers
+if TYPE_CHECKING:  # pragma: no cover - only for static analysis
     from pm4py.objects.petri_net.obj import PetriNet  # type: ignore[import]
 
 
 def _ensure_petri_net(petri_net: Any) -> Any:
-    """
-    Minimal runtime validation that what we received behaves like a PM4Py Petri net.
-    """
     if petri_net is None:
         raise ValueError("A Petri net instance is required to compute simplicity metrics.")
-    for attr in ("places", "transitions"):
+    for attr in ("places", "transitions", "arcs"):
         if not hasattr(petri_net, attr):
             raise TypeError(
                 f"The provided object does not expose the expected '{attr}' attribute."
             )
-    if not hasattr(petri_net, "arcs"):
-        raise TypeError("The provided object does not expose the expected 'arcs' attribute.")
     return petri_net
 
 
@@ -28,39 +24,43 @@ def _outgoing_transitions(place: Any) -> Iterable[Any]:
             yield target
 
 
-def entropy_simplicity_metric(petri_net: Any) -> float:
+def entropy_simplicity_petri_net(net: PetriNet):
     """
-    Entropy-based simplicity metric in the range [0, 1].
+    Compute entropy-based simplicity metric for a PM4Py Petri net.
 
-    A place that branches uniformly over `n` transitions contributes an entropy of log(n).
-    We normalise per place and return 1 minus the average normalised entropy, so
-    deterministic behaviour (no branching) scores 1.0.
+    Args:
+        net (PetriNet): A PM4Py Petri net object.
+
+    Returns:
+        dict: {'entropy': H, 'simplicity': S}
     """
-    net = _ensure_petri_net(petri_net)
+    if not isinstance(net, PetriNet):
+        raise TypeError("Input must be a pm4py.objects.petri.petrinet.PetriNet object")
 
-    if not net.places:
-        return 1.0
+    places = list(net.places)
+    transitions = list(net.transitions)
+    total_entropy = 0.0
+    place_count = len(places)
 
-    normalised_entropies = []
-    for place in net.places:
-        transitions = list(_outgoing_transitions(place))
-        branching = len(transitions)
-        if branching <= 1:
+    for place in places:
+        # Find outgoing transitions (place -> transition)
+        outgoing_transitions = [arc.target for arc in place.out_arcs if isinstance(arc.target, PetriNet.Transition)]
+        
+        if not outgoing_transitions:
             continue
 
-        probability = 1.0 / branching
-        entropy = -branching * probability * math.log(probability)
-        max_entropy = math.log(branching)
-        if max_entropy > 0:
-            normalised_entropies.append(entropy / max_entropy)
+        # Assume uniform probability among outgoing transitions
+        n = len(outgoing_transitions)
+        probs = [1.0 / n] * n
+        H_p = -sum(p * math.log2(p) for p in probs)
+        total_entropy += H_p
 
-    if not normalised_entropies:
-        return 1.0
+    # Mean entropy per place
+    H = total_entropy / place_count if place_count > 0 else 0
+    H_max = math.log2(len(transitions)) if len(transitions) > 1 else 1
+    S = 1 - (H / H_max if H_max > 0 else 0)
 
-    mean_entropy = sum(normalised_entropies) / len(normalised_entropies)
-    score = 1.0 - mean_entropy
-    return max(0.0, min(1.0, score))
-
+    return {'entropy': H, 'simplicity': S}
 
 def size_simplicity_metric(petri_net: Any) -> int:
     """

@@ -1,0 +1,30 @@
+CONSTANT ATTRIBUTES ANALYSIS
+================================================================================
+
+Total attributes checked: 18
+Constant attributes: 3
+Variable attributes: 15
+
+CONSTANT ATTRIBUTES (stay the same across ALL cases):
+--------------------------------------------------------------------------------
+  [CONSTANT] case:ApplicationType
+  [CONSTANT] case:LoanGoal
+  [CONSTANT] case:RequestedAmount
+
+VARIABLE ATTRIBUTES:
+--------------------------------------------------------------------------------
+  [VARIABLE] Accepted: 96.09% of cases constant
+  [VARIABLE] OfferedAmount: 88.63% of cases constant
+  [VARIABLE] NumberOfTerms: 87.38% of cases constant
+  [VARIABLE] CreditScore: 84.75% of cases constant
+  [VARIABLE] FirstWithdrawalAmount: 84.06% of cases constant
+  [VARIABLE] Selected: 80.10% of cases constant
+  [VARIABLE] MonthlyCost: 79.56% of cases constant
+  [VARIABLE] OfferID: 72.84% of cases constant
+  [VARIABLE] org:resource: 0.23% of cases constant
+  [VARIABLE] EventOrigin: 0.00% of cases constant
+  [VARIABLE] Action: 0.00% of cases constant
+  [VARIABLE] concept:name: 0.00% of cases constant
+  [VARIABLE] EventID: 0.00% of cases constant
+  [VARIABLE] time:timestamp: 0.00% of cases constant
+  [VARIABLE] lifecycle:transition: 0.00% of cases constant
