@@ -1,0 +1,21 @@
+# Core pm4py dependencies
+numpy
+pandas
+networkx
+graphviz
+scipy
+lxml
+matplotlib
+pytz
+tqdm
+wheel
+setuptools
+cvxopt;python_version<'3.14'
+
+# Additional dependencies for analysis scripts and notebooks
+seaborn
+scikit-learn
+shap
+jupyter
+ipykernel
+
