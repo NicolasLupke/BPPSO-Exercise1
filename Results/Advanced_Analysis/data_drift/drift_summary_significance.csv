@@ -1,0 +1,7 @@
+variable,2016-02,2016-03,2016-04,2016-05,2016-06,2016-07,2016-08,2016-09,2016-10,2016-11,2016-12
+app_type,False,False,False,False,True,True,True,True,True,True,True
+case_length,True,True,True,False,False,True,True,True,True,True,True
+duration_days,True,True,True,False,True,True,True,True,True,True,True
+loan_goal,False,True,True,True,True,True,True,True,True,True,True
+outcome,False,False,False,False,False,False,False,False,False,True,True
+requested_amount,True,True,True,True,True,False,False,True,True,True,True

@@ -1,0 +1,6 @@
+A_Concept Trace Coverage
+========================
+Only lifecycle 'complete': True
+Total cases: 31509
+Cases containing 'A_Concept': 31509
+Coverage: 100.00%

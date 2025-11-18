@@ -26,6 +26,7 @@ def main():
     # Calculate basic metrics
     num_cases = log['case:concept:name'].nunique()
     num_events = log["EventID"].nunique()
+    num_offers = log['OfferID'].dropna().nunique()
     
     # Number of process variants
     variants = pm4py.get_variants(log)
@@ -102,6 +103,7 @@ def main():
         'Metric': [
             'Number of cases',
             'Number of events',
+            'Number of offers',
             'Number of process variants',
             'Number of case labels',
             'Number of event labels',
@@ -125,6 +127,7 @@ def main():
         'Value': [
             f"{num_cases:,}",
             f"{num_events:,}",
+            f"{num_offers:,}" if num_offers > 0 else "N/A",
             f"{num_variants:,}",
             num_case_labels,
             num_event_labels,

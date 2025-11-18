@@ -1,0 +1,11 @@
+feature,importance_duration
+num_unique_resources,0.25320122098506115
+num_validate_events,0.22447321915547827
+num_call_events,0.1684765298507121
+case_length,0.09104713091018357
+requested_amount,0.08432823109907935
+start_month,0.07157352537449249
+loan_goal_encoded,0.05263801909889112
+num_unique_activities,0.04864174954536245
+app_type_encoded,0.005620373980739598
+num_leads_events,0.0

@@ -1,0 +1,11 @@
+feature,importance_outcome
+num_validate_events,0.32037614588279656
+num_unique_activities,0.28063269807085645
+case_length,0.1164536734340918
+num_call_events,0.08614378430777407
+num_unique_resources,0.08532203289561845
+requested_amount,0.04128764246868943
+start_month,0.032185325437849875
+loan_goal_encoded,0.023562945825566114
+app_type_encoded,0.014035751676757264
+num_leads_events,0.0

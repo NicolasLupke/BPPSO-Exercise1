@@ -1,9 +1,9 @@
 CONSTANT ATTRIBUTES ANALYSIS
 ================================================================================
 
-Total attributes checked: 18
+Total attributes checked: 19
 Constant attributes: 3
-Variable attributes: 15
+Variable attributes: 16
 
 CONSTANT ATTRIBUTES (stay the same across ALL cases):
 --------------------------------------------------------------------------------
@@ -22,9 +22,10 @@ VARIABLE ATTRIBUTES:
   [VARIABLE] MonthlyCost: 79.56% of cases constant
   [VARIABLE] OfferID: 72.84% of cases constant
   [VARIABLE] org:resource: 0.23% of cases constant
-  [VARIABLE] EventOrigin: 0.00% of cases constant
   [VARIABLE] Action: 0.00% of cases constant
-  [VARIABLE] concept:name: 0.00% of cases constant
   [VARIABLE] EventID: 0.00% of cases constant
-  [VARIABLE] time:timestamp: 0.00% of cases constant
+  [VARIABLE] EventOrigin: 0.00% of cases constant
+  [VARIABLE] case:concept:name: 0.00% of cases constant
+  [VARIABLE] concept:name: 0.00% of cases constant
   [VARIABLE] lifecycle:transition: 0.00% of cases constant
+  [VARIABLE] time:timestamp: 0.00% of cases constant

@@ -1,0 +1,241 @@
+--- Inductive Miner ---
+c:\Users\nicol\Desktop\Repos\BPPSO - Assignment 1\.venv\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:51<00:00, 143.22it/s]
+Token-based replay fitness:
+  perc_fit_traces: 100.0
+  average_trace_fitness: 1.0
+  log_fitness: 1.0
+  percentage_of_fitting_traces: 100.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [47:06<00:00, 93.37it/s]  
+
+Token-based replay precision:
+  precision: 0.1406587530076867
+
+Simplicity:
+  simplicity_arc_degree: 0.6283
+  entropy: 0.5955
+  simplicity_entropy: 0.9076
+  simplicity_size: 326.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:49<00:00, 145.00it/s]
+
+Generalization:
+  generalization: 0.9485
+
+--------------------------------------------------
+
+--- Alpha Miner ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [00:38<00:00, 413.99it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.40385723651956174
+  log_fitness: 0.38258984617069436
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [02:28<00:00, 1781.24it/s]
+
+Token-based replay precision:
+  precision: 0.09036668421905925
+
+Simplicity:
+  simplicity_arc_degree: 0.5278
+  entropy: 0.6808
+  simplicity_entropy: 0.8552
+  simplicity_size: 93.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [00:38<00:00, 413.72it/s]
+
+Generalization:
+  generalization: 0.9824
+
+--------------------------------------------------
+
+--- Heuristic Miner Standard ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:41<00:00, 156.99it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.9431922134411704
+  log_fitness: 0.9507858485934311
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [06:53<00:00, 638.05it/s] 
+
+Token-based replay precision:
+  precision: 0.6710730616980617
+
+Simplicity:
+  simplicity_arc_degree: 0.5187
+  entropy: 0.7222
+  simplicity_entropy: 0.8864
+  simplicity_size: 308.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:41<00:00, 157.01it/s]
+
+Generalization:
+  generalization: 0.9170
+
+--------------------------------------------------
+
+--- Heuristic Miner Strict ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:39<00:00, 160.00it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.9595109630044542
+  log_fitness: 0.9643053657205476
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [08:56<00:00, 492.09it/s] 
+
+Token-based replay precision:
+  precision: 0.6317402332453672
+
+Simplicity:
+  simplicity_arc_degree: 0.5184
+  entropy: 0.7506
+  simplicity_entropy: 0.8826
+  simplicity_size: 313.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:40<00:00, 159.23it/s]
+
+Generalization:
+  generalization: 0.9431
+
+--------------------------------------------------
+
+--- Heuristic Miner Balanced ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:37<00:00, 163.25it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.958586567981547
+  log_fitness: 0.9614295630206435
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [06:49<00:00, 643.95it/s] 
+
+Token-based replay precision:
+  precision: 0.6716560631911173
+
+Simplicity:
+  simplicity_arc_degree: 0.5128
+  entropy: 0.7796
+  simplicity_entropy: 0.8767
+  simplicity_size: 297.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:36<00:00, 164.38it/s]
+
+Generalization:
+  generalization: 0.9441
+
+--------------------------------------------------
+
+--- Heuristic Miner Noise-tolerant ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:43<00:00, 153.90it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.9431806355812802
+  log_fitness: 0.9507760750599339
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [06:46<00:00, 649.30it/s] 
+
+Token-based replay precision:
+  precision: 0.6710730616980617
+
+Simplicity:
+  simplicity_arc_degree: 0.5210
+  entropy: 0.7170
+  simplicity_entropy: 0.8869
+  simplicity_size: 305.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:43<00:00, 153.88it/s]
+
+Generalization:
+  generalization: 0.9184
+
+--------------------------------------------------
+
+--- Heuristic Miner Selective ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:36<00:00, 164.30it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.9599253283931364
+  log_fitness: 0.9627447651545109
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [06:56<00:00, 633.65it/s] 
+
+Token-based replay precision:
+  precision: 0.6760333013038569
+
+Simplicity:
+  simplicity_arc_degree: 0.5128
+  entropy: 0.8102
+  simplicity_entropy: 0.8722
+  simplicity_size: 297.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:37<00:00, 163.11it/s]
+
+Generalization:
+  generalization: 0.9452
+
+--------------------------------------------------
+
+--- v7 ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:08<00:00, 231.12it/s]
+Token-based replay fitness:
+  perc_fit_traces: 26.163953156241075
+  average_trace_fitness: 0.9687952658381422
+  log_fitness: 0.9716910658926539
+  percentage_of_fitting_traces: 26.163953156241075
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [06:55<00:00, 635.49it/s] 
+
+Token-based replay precision:
+  precision: 0.535241684446598
+
+Simplicity:
+  simplicity_arc_degree: 0.6538
+  entropy: 0.5186
+  simplicity_entropy: 0.9044
+  simplicity_size: 154.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:08<00:00, 232.78it/s]
+
+Generalization:
+  generalization: 0.9929
+
+--------------------------------------------------
+
+--- v16 ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:08<00:00, 230.95it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.8628885632586348
+  log_fitness: 0.8836288855728787
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [02:21<00:00, 1860.50it/s]
+
+Token-based replay precision:
+  precision: 0.9014254796131032
+
+Simplicity:
+  simplicity_arc_degree: 0.7204
+  entropy: 0.3444
+  simplicity_entropy: 0.9348
+  simplicity_size: 147.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:09<00:00, 229.24it/s]
+
+Generalization:
+  generalization: 0.9672
+
+--------------------------------------------------
+
+--- v17 ---
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:13<00:00, 215.93it/s]
+Token-based replay fitness:
+  perc_fit_traces: 0.0
+  average_trace_fitness: 0.8435209460482853
+  log_fitness: 0.8734190557292498
+  percentage_of_fitting_traces: 0.0
+replaying log with TBR, completed traces :: 100%|██████████| 263907/263907 [02:27<00:00, 1785.88it/s]
+
+Token-based replay precision:
+  precision: 0.9014254796131032
+
+Simplicity:
+  simplicity_arc_degree: 0.7087
+  entropy: 0.3376
+  simplicity_entropy: 0.9378
+  simplicity_size: 161.0000
+replaying log with TBR, completed traces :: 100%|██████████| 15930/15930 [01:13<00:00, 216.36it/s]
+
+Generalization:
+  generalization: 0.9443
+
+--------------------------------------------------

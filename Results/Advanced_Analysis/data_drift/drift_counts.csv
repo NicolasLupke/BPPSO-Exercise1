@@ -1,0 +1,7 @@
+variable,num_significant_drifts
+app_type,7
+case_length,9
+duration_days,10
+loan_goal,10
+outcome,2
+requested_amount,9
