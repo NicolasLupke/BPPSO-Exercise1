@@ -98,6 +98,12 @@ def main():
         'Count': [f"{count:,}" for count in activity_counts.values]
     })
     
+    # 8. Throughput rate (average events per hour)
+    df = pm4py.convert_to_dataframe(log)
+    df['time:timestamp'] = pd.to_datetime(df['time:timestamp'], utc=True)
+    total_hours = (df['time:timestamp'].max() - df['time:timestamp'].min()).total_seconds() / 3600.0
+    throughput_events_per_hour = num_events / total_hours if total_hours > 0 else 0
+    
     # Create statistics table
     stats_data = {
         'Metric': [
@@ -122,7 +128,8 @@ def main():
             'Case arrival average (seconds)',
             'Case arrival average (hours)',
             'Cycle time (seconds)',
-            'Average service time (seconds)'
+            'Average service time (seconds)',
+            'Throughput rate (events per hour)'
         ],
         'Value': [
             f"{num_cases:,}",
@@ -146,7 +153,8 @@ def main():
             f"{case_arrival_average_seconds:.2f}",
             f"{case_arrival_average_hours:.2f}",
             f"{cycle_time:.2f}" if cycle_time is not None else "N/A",
-            f"{avg_service_time:.2f}" if avg_service_time is not None else "N/A"
+            f"{avg_service_time:.2f}" if avg_service_time is not None else "N/A",
+            f"{throughput_events_per_hour:.2f}"
         ]
     }
     
